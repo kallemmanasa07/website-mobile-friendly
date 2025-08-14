@@ -1,0 +1,111 @@
+/* Mobile-First Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.site-nav {
+  margin-bottom: 1rem;
+}
+
+.nav-toggle {
+  display: block;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.nav-links li + li {
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.5rem;
+  background: #555;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.site-nav.active .nav-links {
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column {
+  background: #e0e0e0;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tablet & Smaller Screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
+
+/* Desktop (min-width: 769px) */
+@media only screen and (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .nav-links a {
+    background: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+  }
+  .content {
+    flex-direction: row;
+  }
+  body {
+    font-size: 18px;
+  }
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>Responsive Example</h1>
+    </header>
+
+    <nav class="site-nav">
+      <button class="nav-toggle">Menu</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <section class="column main-section">
+        <h2>Main Content</h2>
+        <p>This is the main content area. It adjusts to screen size.</p>
+         <img src="Logo.png" width="1000px"; height="500px"; alt="Sample Image">
+      </section>
+      <aside class="column sidebar">
+        <h2>Sidebar</h2>
+        <p>This is the sidebar content.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Responsive Site</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.site-nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
